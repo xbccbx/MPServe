@@ -2,10 +2,10 @@
 #include <pybind11/numpy.h>
 #include <torch/extension.h>
 #include <cuda_runtime.h>
-#include <cstdint>  // 添加这个头文件
+#include <cstdint>  // Add this header.
 #include <tuple>
 
-namespace py = pybind11;  // 添加这个命名空间别名
+namespace py = pybind11;  // Namespace alias.
 
 // Huffman (implemented in build_huffman.cu)
 namespace huffman_cpp {
@@ -129,7 +129,7 @@ namespace huffman_decode_cpp {
         int64_t max_len);
 }
 
-PYBIND11_MODULE(trie_cuda, m) {
+PYBIND11_MODULE(MPServe_cuda, m) {
     m.def("cuda_clock_rate_khz", []() {
         int dev = 0;
         cudaError_t e = cudaGetDevice(&dev);

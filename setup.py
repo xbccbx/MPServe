@@ -7,7 +7,7 @@ import os
 
 
 _THIS_DIR = os.path.dirname(os.path.abspath(__file__))
-_KERNEL_DIR = os.path.normpath(os.path.join(_THIS_DIR, "..", "kernel"))
+_KERNEL_DIR = os.path.normpath(os.path.join(_THIS_DIR, "kernel"))
 
 
 def _k(name: str) -> str:
@@ -39,7 +39,7 @@ ext_modules = [
 ]
 
 setup(
-    name='trie_cuda',
+    name='MPServe_cuda',
     ext_modules=ext_modules,
     cmdclass={'build_ext': BuildExtension},
     zip_safe=False,
